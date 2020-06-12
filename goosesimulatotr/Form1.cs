@@ -18,6 +18,7 @@ namespace goosesimulatotr {
         }
 
         private void button1_Click(object sender, EventArgs e) {
+            mainBtn.Visible = false;
             if(GooseTalkCount < 5) {
                 GooseTalkCount = GooseTalkCount + 1;
                 messageLabel.Text = $"the goose will annoy you now. click again for new msg";
@@ -28,8 +29,8 @@ namespace goosesimulatotr {
                 inputBox.Visible = true;
             } else {
                 MessageBox.Show(goodbyeGenerator(), "the goose", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show("A critical error has occurred. animal goosing will now exit.\nERR_GOOSE_BROKE", "animal goosing", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                messageLabel.Text = "uh oh. looks like the goose got tired. let's wait for now...";
+                waitBtn.Visible = true;
             }
         }
 
@@ -54,6 +55,16 @@ namespace goosesimulatotr {
         private string goodbyeGenerator() {
             string[] messages = { "sorry!! we've talked too much, see you later :)", "oh no! i don't know what to say now... help?", "i was gonna say something, but suddenly i forgot everything. who am i? uuuh", "mmmmpphhh!! mppphphphpp..." };
             return messages[random.Next(messages.Length)];
+        }
+
+        private void waitBtn_Click(object sender, EventArgs e) {
+            GooseTalkCount = GooseTalkCount - 1;
+            messageLabel.Text = $"good work! wait {GooseTalkCount} more times.";
+            if(GooseTalkCount == 0) {
+                messageLabel.Text = "goose is no longer tired! let's talk to goose now :)";
+                waitBtn.Visible = false;
+                mainBtn.Visible = true;
+            }
         }
     }
 }
