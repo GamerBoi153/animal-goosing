@@ -28,6 +28,7 @@ namespace goosesimulatotr {
                 inputBox.Visible = true;
             } else {
                 MessageBox.Show(goodbyeGenerator(), "the goose", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("A critical error has occurred. animal goosing will now exit.\nERR_GOOSE_BROKE", "animal goosing", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
