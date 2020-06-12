@@ -61,7 +61,7 @@ namespace goosesimulatotr {
             GooseTalkCount = GooseTalkCount - 1;
             messageLabel.Text = $"good work! wait {GooseTalkCount} more times.";
             if(GooseTalkCount == 0) {
-                messageLabel.Text = "goose is no longer tired! let's talk to goose now :)";
+                messageLabel.Text = "goose is no longer tired! let's talk to le goose now :)";
                 waitBtn.Visible = false;
                 mainBtn.Visible = true;
             }
