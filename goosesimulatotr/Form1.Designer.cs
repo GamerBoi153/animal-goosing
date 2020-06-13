@@ -83,6 +83,7 @@
             // 
             // waitBtn
             // 
+            this.waitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.waitBtn.Location = new System.Drawing.Point(110, 34);
             this.waitBtn.Name = "waitBtn";
             this.waitBtn.Size = new System.Drawing.Size(75, 23);

@@ -35,6 +35,7 @@ namespace goosesimulatotr {
         }
 
         private void sendBtn_Click(object sender, EventArgs e) {
+            inputBox.Text = "";
             mainBtn.Visible = true;
             sendBtn.Visible = false;
             inputBox.Visible = false;
