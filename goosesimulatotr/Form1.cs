@@ -60,7 +60,7 @@ namespace goosesimulatotr {
         }
 
         private string ResponseGenerator() {
-             // add responses here and remeber to add a $ at the begining
+             // add responses here and remeber to add a $ at the begining of each new response
             string[] responses = { $"you feel like {inputBox.Text}? hm.", "that's great! see you laters", $"i've heard feeling like {inputBox.Text} is a sign of playing too much animal goosing :)", $"{inputBox.Text}? holy hjonk thats great!" }; 
             return responses[random.Next(responses.Length)];
         }
