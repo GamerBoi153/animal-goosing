@@ -58,10 +58,10 @@ namespace goosesimulatotr {
             string[] messages = { "honk! how are you feeling right now?" };
             return messages[random.Next(messages.Length)];
         }
-        
+
         private string ResponseGenerator() {
             // add responses here
-            string[] responses = { $"you feel like {inputBox.Text}? hm.", "that's great! see you laters", $"i've heard feeling like {inputBox.Text} is a sign of playing too much animal goosing :)" };
+            string[] responses = { $"you feel like {inputBox.Text}? hm.", "that's great! see you laters", $"i've heard feeling like {inputBox.Text} is a sign of playing too much animal goosing :)", $"{inputBox.Text}? holy hjonk thats great!" }; 
             return responses[random.Next(responses.Length)];
         }
         
