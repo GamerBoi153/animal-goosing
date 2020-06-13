@@ -60,16 +60,16 @@ namespace goosesimulatotr {
         }
         
         private string ResponseGenerator() {
+            // add responses here
             string[] responses = { $"you feel like {inputBox.Text}? hm.", "that's great! see you laters", $"i've heard feeling like {inputBox.Text} is a sign of playing too much animal goosing :)" };
             return responses[random.Next(responses.Length)];
         }
-
+        
         private string GoodbyeGenerator() {
+            // add goodbyes here
             string[] messages = { "sorry!! we've talked too much, see you later :)", "oh no! i don't know what to say now... help?", "i was gonna say something, but suddenly i forgot everything. who am i? uuuh", "mmmmpphhh!! mppphphphpp..." };
             return messages[random.Next(messages.Length)];
         }
-
-       
 
         private void WaitBtn_Click(object sender, EventArgs e) {
             GooseTalkCount -= 1;
