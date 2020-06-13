@@ -10,7 +10,8 @@
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing) {
-            if(disposing && (components != null)) {
+            if(!disposing || components == null) {
+            } else {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -50,7 +51,7 @@
             this.mainBtn.TabIndex = 1;
             this.mainBtn.Text = "message";
             this.mainBtn.UseVisualStyleBackColor = true;
-            this.mainBtn.Click += new System.EventHandler(this.button1_Click);
+            this.mainBtn.Click += new System.EventHandler(this.MainBtn_Click);
             // 
             // inputBox
             // 
@@ -70,7 +71,7 @@
             this.sendBtn.Text = "send";
             this.sendBtn.UseVisualStyleBackColor = true;
             this.sendBtn.Visible = false;
-            this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
+            this.sendBtn.Click += new System.EventHandler(this.SendBtn_Click);
             // 
             // label1
             // 
@@ -91,7 +92,7 @@
             this.waitBtn.Text = "wait";
             this.waitBtn.UseVisualStyleBackColor = true;
             this.waitBtn.Visible = false;
-            this.waitBtn.Click += new System.EventHandler(this.waitBtn_Click);
+            this.waitBtn.Click += new System.EventHandler(this.WaitBtn_Click);
             // 
             // Form1
             // 
